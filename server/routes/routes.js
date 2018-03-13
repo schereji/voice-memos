@@ -14,7 +14,7 @@ router.route('/add')
 		memo.date = req.body.date;
 		memo.save(function(err) {
 			if (err) {res.send(err);}
-			res.send('Memo successfully added!');
+			res.send(req.body);
 		});
 	});
 

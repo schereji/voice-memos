@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {updateCurrentUrl} from "../reducers/memos";
 
 class Recorder extends Component {
 	mediaRecorder;
-	audioUrl;
+	
+	componentWillUnmount () {
+		this.mediaRecorder.removeEventListener()
+	}
 	
 	handleRecording = () => {
 		if (!MediaRecorder.isTypeSupported('audio/webm')) {
@@ -12,7 +17,7 @@ class Recorder extends Component {
 		navigator.mediaDevices.getUserMedia({ audio: true })
 			.then(mediaStream => {
 				const audioChunks = [];
-				const options = {mimType: 'audio/webm'};
+				const options = {mimeType: 'audio/webm'};
 				this.mediaRecorder = this.mediaRecorder || new MediaRecorder(mediaStream, options);
 				
 				if(this.mediaRecorder.state === 'inactive'){
@@ -20,34 +25,37 @@ class Recorder extends Component {
 					this.mediaRecorder.start();
 				} else {
 					this.mediaRecorder.stop();
+					$('.record-button').removeClass('recording');
+					$('#voiceMemoModal').modal('show');
 				}
 				
-				this.mediaRecorder.addEventListener("dataavailable", event => {
+				this.mediaRecorder.addEventListener("dataavailable", (event) => {
 					audioChunks.push(event.data);
-					const audioBlob  = new Blob(audioChunks);
-					this.audioUrl = URL.createObjectURL(audioBlob);
-					this.props.updateAudioLink(this.audioUrl);
-					document.querySelector("audio").src = this.audioUrl;
+					const audioBlob  = new Blob(audioChunks, { type: 'audio/webm' });
+					
+					const audioUrl = URL.createObjectURL(audioBlob);
+					this.props.updateCurrentUrl(audioUrl);
+					
+					document.querySelector("audio").src = audioUrl;
 				});
-				
-				this.mediaRecorder.addEventListener("stop", () => {
-					$('.record-button').removeClass('recording');
-					$('.done').removeClass('hidden');
-				});
+
 			});
 	};
 	
 	render() {
 		return (
 			<section className="recording-console row">
-				<button type="button" className="record-button" onClick={this.handleRecording}>
-					Record Memo
-				</button>
-				<audio controls></audio>
-				<button data-toggle="modal" data-target="#voiceMemoModal" className="done hidden">Done</button>
+				<div className="col-12">
+					<button type="button" className="record-button" onClick={this.handleRecording}>
+						<span className='pulse-button'></span>
+					</button>
+				</div>
 			</section>
 		)
 	}
 }
 
-export default Recorder;
+export default connect(
+	null,
+	{updateCurrentUrl}
+)(Recorder);
