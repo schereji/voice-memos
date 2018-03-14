@@ -7,13 +7,18 @@ class VoiceMemoList extends Component {
 		this.props.fetchMemos();
 	}
 	handlePlaybackState = (event) => {
-		$(event.target).addClass('playing');
-		const audioFile = $(event.target).parents('.list-item').find('audio')[0];
-		audioFile.play();
+		const audioFile = $(event.target)
+			.parent()
+			.parent()
+			.next()[0];
+		if (audioFile) {
+			$(event.target).parent().addClass('playing');
+			audioFile.play();
+		}
 	};
 	
 	handleEndedState = (event) => {
-		$(event.target).parent().find('.fa-play-circle').removeClass('playing')[0];
+		$(event.target).parent().find('.playing').removeClass('playing')
 	};
 	
 	render() {
@@ -42,8 +47,8 @@ const VoiceMemo = (props) => (
 			<span className="date">{props.date}</span>
 		</div>
 		<div className="col-5 audio-url">
-			<span onClick={props.handlePlaybackState}>
-				<i className="far fa-play-circle" ></i>
+			<span className="play-button-container" onClick={props.handlePlaybackState}>
+				<i className="far fa-play-circle"></i>
 			</span>
 			<audio src={props.audioUrl} onEnded={props.handleEndedState}/>
 		</div>

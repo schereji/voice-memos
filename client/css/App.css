@@ -104,6 +104,9 @@
   font-style: italic;
   font-weight: lighter;
 }
+.play-button-container {
+  cursor: pointer;
+}
 
 .playing {
   color: #acacac;

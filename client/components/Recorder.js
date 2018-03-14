@@ -36,7 +36,7 @@ class Recorder extends Component {
 					const audioUrl = URL.createObjectURL(audioBlob);
 					this.props.updateCurrentUrl(audioUrl);
 					
-					document.querySelector("audio").src = audioUrl;
+					$('.current-audio').attr('src', audioUrl);
 				});
 
 			});

@@ -19440,7 +19440,7 @@ exports = module.exports = __webpack_require__(45)(undefined);
 
 
 // module
-exports.push([module.i, ".voice-memos-app {\n  padding-bottom: 15px;\n  padding-top: 15px;\n}\n\n.home h1 {\n  font-size: 24px;\n  font-weight: lighter;\n  text-align: center;\n}\n\n.record-button {\n  border: solid 2px #cc0000;\n  box-shadow: 0 0 0 0 rgba(179, 0, 0, 0.7);\n  border-radius: 50%;\n  background-color: #e60000;\n  cursor: pointer;\n  display: block;\n  height: 80px;\n  margin: 30px auto;\n  position: relative;\n  width: 80px;\n}\n\n.record-button:focus {\n  border: solid 2px #ff0000;\n  box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);\n  background-color: #ff3333;\n  outline: none;\n  transform: scale(1.2);\n}\n\n.recording {\n  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n}\n\n.modal-content {\n  margin: 0 auto;\n  max-width: 450px;\n}\n\n.modal-title {\n  display: block;\n  width: 100%;\n}\n\n.modal-title audio {\n  width: 100%;\n}\n\n.modal-body input {\n  border: 1px solid rgba(0,0,0, .2);\n  margin: 10px auto;\n  max-width: 300px;\n  width: 80%;\n}\n\n.action-buttons {\n  margin: 0 auto;\n  padding: 10px 0;\n  max-width: 300px;\n}\n\n.submit-button,\n.cancel-button {\n  text-align: center;\n}\n\n.submit-button button,\n.cancel-button button {\n  background-color: transparent;\n  border: 1px solid rgba(0,0,0, .2);\n  padding: 3px 0;\n  width: 90px;\n}\n\n.list-item {\n  padding: 12px 0;\n  margin: 0 auto;\n  max-width: 430px;\n}\n\n.information span {\n  display: block;\n}\n\n.fa-play-circle {\n  color: #333;\n  font-size: 35px;\n  height: auto;\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  z-index: 999;\n}\n\n\n.date {\n  font-size: 14px;\n  font-style: italic;\n  font-weight: lighter;\n}\n\n.playing {\n  color: #acacac;\n}\n\n.hidden {\n  display: none;\n}\n\n\n\n\n@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n\n\n\n", ""]);
+exports.push([module.i, ".voice-memos-app {\n  padding-bottom: 15px;\n  padding-top: 15px;\n}\n\n.home h1 {\n  font-size: 24px;\n  font-weight: lighter;\n  text-align: center;\n}\n\n.record-button {\n  border: solid 2px #cc0000;\n  box-shadow: 0 0 0 0 rgba(179, 0, 0, 0.7);\n  border-radius: 50%;\n  background-color: #e60000;\n  cursor: pointer;\n  display: block;\n  height: 80px;\n  margin: 30px auto;\n  position: relative;\n  width: 80px;\n}\n\n.record-button:focus {\n  border: solid 2px #ff0000;\n  box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);\n  background-color: #ff3333;\n  outline: none;\n  transform: scale(1.2);\n}\n\n.recording {\n  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);\n}\n\n.modal-content {\n  margin: 0 auto;\n  max-width: 450px;\n}\n\n.modal-title {\n  display: block;\n  width: 100%;\n}\n\n.modal-title audio {\n  width: 100%;\n}\n\n.modal-body input {\n  border: 1px solid rgba(0,0,0, .2);\n  margin: 10px auto;\n  max-width: 300px;\n  width: 80%;\n}\n\n.action-buttons {\n  margin: 0 auto;\n  padding: 10px 0;\n  max-width: 300px;\n}\n\n.submit-button,\n.cancel-button {\n  text-align: center;\n}\n\n.submit-button button,\n.cancel-button button {\n  background-color: transparent;\n  border: 1px solid rgba(0,0,0, .2);\n  padding: 3px 0;\n  width: 90px;\n}\n\n.list-item {\n  padding: 12px 0;\n  margin: 0 auto;\n  max-width: 430px;\n}\n\n.information span {\n  display: block;\n}\n\n.fa-play-circle {\n  color: #333;\n  font-size: 35px;\n  height: auto;\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  z-index: 999;\n}\n\n\n.date {\n  font-size: 14px;\n  font-style: italic;\n  font-weight: lighter;\n}\n.play-button-container {\n  cursor: pointer;\n}\n\n.playing {\n  color: #acacac;\n}\n\n.hidden {\n  display: none;\n}\n\n\n\n\n@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}\n\n\n\n", ""]);
 
 // exports
 
@@ -20040,11 +20040,13 @@ var VoiceMemoList = function (_Component) {
 		}
 
 		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = VoiceMemoList.__proto__ || Object.getPrototypeOf(VoiceMemoList)).call.apply(_ref, [this].concat(args))), _this), _this.handlePlaybackState = function (event) {
-			$(event.target).addClass('playing');
-			var audioFile = $(event.target).parents('.list-item').find('audio')[0];
-			audioFile.play();
+			var audioFile = $(event.target).parent().parent().next()[0];
+			if (audioFile) {
+				$(event.target).parent().addClass('playing');
+				audioFile.play();
+			}
 		}, _this.handleEndedState = function (event) {
-			$(event.target).parent().find('.fa-play-circle').removeClass('playing')[0];
+			$(event.target).parent().find('.playing').removeClass('playing');
 		}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
@@ -20103,7 +20105,7 @@ var VoiceMemo = function VoiceMemo(props) {
 			{ className: 'col-5 audio-url' },
 			_react2.default.createElement(
 				'span',
-				{ onClick: props.handlePlaybackState },
+				{ className: 'play-button-container', onClick: props.handlePlaybackState },
 				_react2.default.createElement('i', { className: 'far fa-play-circle' })
 			),
 			_react2.default.createElement('audio', { src: props.audioUrl, onEnded: props.handleEndedState })
@@ -22111,7 +22113,7 @@ var Recorder = function (_Component) {
 					var audioUrl = URL.createObjectURL(audioBlob);
 					_this.props.updateCurrentUrl(audioUrl);
 
-					document.querySelector("audio").src = audioUrl;
+					$('.current-audio').attr('src', audioUrl);
 				});
 			});
 		}, _temp), _possibleConstructorReturn(_this, _ret);
